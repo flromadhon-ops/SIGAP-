@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIGAP – Ekosistem Sosio-Kewirausahaan untuk Pengemudi Ojol Perempuan</title>
+<meta name="description" content="SIGAP adalah platform ekosistem sosio-kewirausahaan berbasis digital untuk pemberdayaan ekonomi dan kemandirian finansial pengemudi ojek online perempuan di Surabaya.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--dk:#14472B;--gr:#1B7F4B;--lt:#CFE8D5;--bg:#F4FAF5;--pk:#E85D9B;--pkd:#C2255C;--pkl:#FFE3EF;--ink:#173324}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:rgba(244,250,245,.94);backdrop-filter:blur(6px);border-bottom:2px solid var(--lt)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;max-width:1080px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;color:var(--dk);text-decoration:none;letter-spacing:.04em}
+.nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav li a{display:block;padding:8px 14px;border-radius:99px;text-decoration:none;font-weight:600;font-size:14px}
+.nav li a:hover{background:var(--lt)}
+.btn{display:inline-block;background:var(--pkd);color:#fff;font-weight:700;padding:14px 28px;border-radius:99px;text-decoration:none;border:0;font-size:16px}
+.btn:hover{background:#A51D4D}
+.btn.alt{background:transparent;color:var(--dk);border:2px solid var(--dk);margin-left:10px}
+.btn.alt:hover{background:var(--lt)}.btn.sm{padding:9px 20px;font-size:14px}.nav .btn.sm{margin-left:auto}.sim{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}.fld{display:block;margin-bottom:16px;font-weight:600;font-size:14px}.fld input,.fld select,.fld textarea{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;border:2px solid var(--lt);border-radius:12px;background:#fff;color:var(--ink)}.fld input:focus,.fld select:focus,.fld textarea:focus,.btn:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--pk);outline-offset:2px}.res{background:var(--dk);color:#fff;border-radius:24px;padding:28px}.res b{display:block;font-size:36px;line-height:1.2;color:#FFC7DF}.res p{margin:4px 0 18px}details{background:#fff;border:2px solid var(--lt);border-radius:16px;padding:14px 20px;margin-bottom:10px}summary{cursor:pointer;font-weight:700;color:var(--dk)}details p{margin:10px 0 0}.wa{position:fixed;right:18px;bottom:18px;z-index:9;width:58px;height:58px;border-radius:50%;background:#1FA855;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}.hint{font-size:12.5px;color:#456B56}
+.hero{padding:64px 0 56px;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.tag{display:inline-block;background:var(--pkl);color:var(--pkd);font-weight:700;font-size:13px;padding:6px 14px;border-radius:99px;margin-bottom:16px}
+h1{font-size:clamp(30px,5vw,50px);line-height:1.15;margin:0 0 16px;color:var(--dk);font-weight:800}
+h1 em{font-style:normal;color:var(--pkd)}
+.lead{font-size:18px;margin:0 0 28px;max-width:560px}
+.blob{background:var(--dk);border-radius:36px 36px 120px 36px;padding:32px;color:#fff;position:relative}
+.blob b{display:block;font-size:56px;line-height:1;color:#FFC7DF}
+.blob p{margin:8px 0 20px}
+.blob p:last-child{margin:0;font-size:13px;color:var(--lt)}
+section{padding:60px 0}
+.band{background:var(--dk);color:#fff}
+.band h2,.band .eyebrow{color:#fff}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.14em;color:var(--pkd);text-transform:uppercase}
+h2{font-size:clamp(26px,4vw,36px);line-height:1.2;margin:6px 0 14px;color:var(--dk);font-weight:800}
+.sub{max-width:680px;margin:0 0 32px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:2px solid var(--lt);border-radius:22px;padding:24px}
+.card:nth-child(2){border-color:var(--pk)}
+.card h3{margin:14px 0 6px;font-size:19px;color:var(--dk)}
+.card p{margin:0;font-size:15px}
+.ic{width:52px;height:52px;border-radius:16px;background:var(--lt);display:flex;align-items:center;justify-content:center}
+.card:nth-child(2) .ic{background:var(--pkl)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+.step{background:rgba(255,255,255,.1);border-radius:18px;padding:20px}
+.step:before{counter-increment:s;content:counter(s);display:flex;width:36px;height:36px;border-radius:50%;background:var(--pk);color:#fff;font-weight:800;align-items:center;justify-content:center;margin-bottom:10px}
+.step b{display:block;margin-bottom:4px}
+.step span{font-size:14px;color:var(--lt)}
+.market{display:grid;grid-template-columns:360px 1fr;gap:40px;align-items:center}
+.rings{position:relative;width:340px;height:340px;max-width:100%}
+.rings div{position:absolute;border-radius:50%;display:flex;justify-content:center;font-weight:800;padding-top:14px}
+.r1{inset:0;background:var(--dk);color:#fff}
+.r2{left:50px;top:100px;width:240px;height:240px;background:#7FB892;color:#0F3320}
+.r3{left:105px;top:215px;width:130px;height:125px;background:var(--pkd);color:#fff}
+.rows .row{display:grid;grid-template-columns:70px 1fr;gap:10px;margin-bottom:10px}
+.rows .k{border-radius:12px;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.rows .v{background:#fff;border:2px solid var(--lt);border-radius:12px;padding:10px 14px;font-size:14px}
+.rows .v b{font-size:22px;display:block;line-height:1.2}
+.note{font-size:12.5px;color:#456B56;margin-top:10px}
+.tbl{width:100%;border-collapse:separate;border-spacing:0 8px;min-width:620px}
+.tbl th{background:var(--pkd);color:#fff;padding:10px;font-size:13px;line-height:1.3}
+.tbl th:first-child{background:none}
+.tbl td{background:#fff;text-align:center;padding:12px 8px;font-weight:700;border-top:2px solid var(--lt);border-bottom:2px solid var(--lt)}
+.tbl td:first-child{text-align:left;font-size:17px;color:var(--dk);border-left:2px solid var(--lt);border-radius:14px 0 0 14px;padding-left:16px}
+.tbl td:last-child{border-right:2px solid var(--lt);border-radius:0 14px 14px 0}
+.tbl tr.me td{background:var(--pkl);border-color:var(--pk)}
+.y{color:var(--gr)}.n{color:var(--pkd)}
+.scroll{overflow-x:auto}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cta{text-align:center;background:var(--pkl);border-radius:36px;padding:48px 24px}
+footer{padding:28px 0;font-size:13px;color:#456B56;text-align:center;border-top:2px solid var(--lt)}
+@media(max-width:820px){.sim{grid-template-columns:1fr}.nav .btn.sm{margin-left:0}.team{grid-template-columns:1fr}.hero,.market{grid-template-columns:1fr}.cards,.steps{grid-template-columns:1fr 1fr}.nav ul{display:none}}
+@media(max-width:520px){.cards,.steps,.team{grid-template-columns:1fr}.btn.alt{margin:10px 0 0}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<a class="logo" href="#top"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#1B7F4B"/><path d="M10 21c0-6 4-10 9-10 3 0 5 1 6 3-4 0-6 2-6 5 0 2 1 3 3 3-5 4-12 3-12-1z" fill="#FFC7DF"/></svg>SIGAP</a>
+<ul><li><a href="#masalah">Masalah</a></li><li><a href="#solusi">Solusi</a></li><li><a href="#alur">Cara kerja</a></li><li><a href="#kompetitor">Kompetitor</a></li><li><a href="#simulasi">Simulasi</a></li><li><a href="#faq">FAQ</a></li><li><a href="#tim">Tim</a></li></ul><a class="btn sm" href="#gabung">Gabung</a>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+<div>
+<span class="tag">Untuk pengemudi ojol perempuan di Surabaya</span>
+<h1>Pengemudi ojol perempuan <em>berdaya</em> dan mandiri secara finansial</h1>
+<p class="lead">SIGAP adalah platform ekosistem sosio-kewirausahaan berbasis digital untuk pemberdayaan ekonomi dan kemandirian finansial pengemudi ojek online perempuan di Surabaya.</p>
+<a class="btn" href="#gabung">Gabung lewat WhatsApp</a><a class="btn alt" href="#solusi">Kenali SIGAP</a>
+</div>
+<div class="blob"><b>±4,9%</b><p>mitra Grab Indonesia adalah perempuan: 182.500 dari 3,7 juta mitra pada 2025.</p><p>Jumlahnya terus bertambah, tetapi dukungan khusus untuk mereka masih sedikit.</p></div>
+</div>
+
+<section id="masalah"><div class="wrap">
+<div class="eyebrow">Masalah</div><h2>Bekerja di jalan, tanpa ruang untuk bertumbuh</h2>
+<p class="sub">Pengemudi perempuan menghadapi kerentanan yang berlapis. Platform transportasi besar dibangun untuk mempertemukan penumpang dan pengemudi, bukan untuk menguatkan ekonomi pengemudinya.</p>
+<div class="cards">
+<div class="card"><div class="ic"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#14472B" stroke-width="2.4" stroke-linecap="round"><path d="M4 22V10M12 22V4M20 22v-8M26 22H2"/></svg></div><h3>Pendapatan menyempit</h3><p>Jumlah pengemudi yang terus bertambah membuat pendapatan per pengemudi melandai, dan komisi aplikator menjadi keluhan utama.</p></div>
+<div class="card"><div class="ic"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#C2255C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="10" r="5"/><path d="M4 25c1-6 5-8 10-8s9 2 10 8"/></svg></div><h3>Kerentanan khusus perempuan</h3><p>Pekerjaan ini identik dengan laki-laki. Perempuan menghadapi stigma, penolakan penumpang, dan beban ganda di rumah.</p></div>
+<div class="card"><div class="ic"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#14472B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="22" height="15" rx="3"/><path d="M9 8V5h10v3M3 15h22"/></svg></div><h3>Belum ada jalur usaha</h3><p>Status mitra informal dan minim literasi keuangan menyulitkan pengemudi membangun tabungan atau usaha sampingan.</p></div>
+</div></div></section>
+
+<section id="solusi" class="band"><div class="wrap">
+<div class="eyebrow">Solusi</div><h2>Satu ekosistem untuk berdaya dan mandiri</h2>
+<p class="sub" style="color:var(--lt)">SIGAP mempertemukan sisi sosial dan kewirausahaan dalam satu platform digital, khusus untuk pengemudi ojol perempuan di Surabaya.</p>
+<div class="cards">
+<div class="card" style="color:var(--ink)"><div class="ic"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#14472B" stroke-width="2.4" stroke-linecap="round"><circle cx="14" cy="14" r="10"/><path d="M14 8v12M10 12h6a2.5 2.5 0 010 5h-6"/></svg></div><h3>Kemandirian finansial</h3><p>Edukasi keuangan praktis untuk pengemudi: mencatat pemasukan dan pengeluaran harian, menyusun anggaran, menabung rutin, dan menyiapkan dana darurat. Semuanya disampaikan dengan bahasa sederhana dan bisa diakses dari ponsel.</p></div>
+<div class="card" style="color:var(--ink)"><div class="ic"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#C2255C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l10-8 10 8v11H4z"/><path d="M11 23v-7h6v7"/></svg></div><h3>Sosio-kewirausahaan</h3><p>Jalur usaha sampingan yang bisa dijalankan di sela jam kerja, lengkap dengan pelatihan dasar berwirausaha. Pengemudi juga berkolaborasi dengan sesama pengemudi dan pelaku usaha lokal di Surabaya.</p></div>
+<div class="card" style="color:var(--ink)"><div class="ic"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#14472B" stroke-width="2.4" stroke-linecap="round"><circle cx="9" cy="10" r="4"/><circle cx="20" cy="11" r="3"/><path d="M2 23c1-5 4-6 7-6s6 1 7 6M17 18c4-1 8 0 9 5"/></svg></div><h3>Komunitas dan dukungan</h3><p>Wadah berkumpul sesama pengemudi perempuan untuk berbagi pengalaman dan saling menguatkan, didampingi mentor, serta terhubung dengan mitra seperti pelaku UMKM, lembaga pelatihan, dan komunitas pemberdayaan perempuan.</p></div>
+</div></div></section>
+
+<section id="alur"><div class="wrap">
+<div class="eyebrow">Cara kerja</div><h2>Dari bergabung sampai mandiri</h2>
+<p class="sub">Empat langkah sederhana dari bergabung sampai mandiri.</p>
+<div class="steps" style="color:#fff;background:var(--dk);border-radius:28px;padding:22px">
+<div class="step"><b>Daftar</b><span>Pengemudi perempuan membuat akun SIGAP.</span></div>
+<div class="step"><b>Kenali kebutuhan</b><span>Memetakan kondisi dan target finansial.</span></div>
+<div class="step"><b>Belajar dan usaha</b><span>Mengikuti program dan memulai usaha.</span></div>
+<div class="step"><b>Tumbuh bersama</b><span>Bergabung dengan komunitas dan mitra.</span></div>
+</div></div></section>
+
+<section id="kompetitor" style="background:#fff"><div class="wrap">
+<div class="eyebrow">Kompetitor</div><h2>Melengkapi, bukan menyaingi</h2>
+<p class="sub">Grab dan Gojek kuat di transportasi dan jangkauan. SIGAP mengisi ruang pemberdayaan yang belum jadi fokus mereka.</p>
+<div class="scroll"><table class="tbl">
+<tr><th></th><th>Fokus perempuan pengemudi</th><th>Literasi dan kemandirian finansial</th><th>Ekosistem sosio-kewirausahaan</th><th>Pilihan gender pengemudi</th><th>Jangkauan pengguna luas</th></tr>
+<tr class="me"><td>SIGAP</td><td class="y">Ya</td><td class="y">Ya</td><td class="y">Ya</td><td class="n">Tidak</td><td class="n">Belum</td></tr>
+<tr><td>Grab</td><td class="n">Tidak</td><td class="n">Tidak</td><td class="n">Tidak</td><td class="n">Tidak</td><td class="y">Ya</td></tr>
+<tr><td>Gojek</td><td class="n">Tidak</td><td class="n">Tidak</td><td class="n">Tidak</td><td class="n">Tidak</td><td class="y">Ya</td></tr>
+</table></div>
+<p class="note">Grab dan Gojek belum memiliki fitur memilih gender pengemudi (Kontan). Penilaian kolom lain adalah analisis tim.</p>
+</div></section>
+
+<section id="simulasi"><div class="wrap">
+<div class="eyebrow">Simulasi</div><h2>Hitung target tabunganmu</h2>
+<p class="sub">Coba hitung berapa lama target keuanganmu tercapai. Hasilnya hanya gambaran dan tidak disimpan di mana pun.</p>
+<div class="sim">
+<div>
+<label class="fld">Pendapatan bersih per hari (Rp)<input id="inc" type="number" min="0" step="5000" value="150000" inputmode="numeric"></label>
+<label class="fld">Hari kerja per bulan<input id="days" type="number" min="1" max="31" value="24" inputmode="numeric"></label>
+<label class="fld">Porsi yang ditabung: <span id="pctv">10</span>%<input id="pct" type="range" min="1" max="50" value="10"></label>
+<label class="fld">Target (Rp), misalnya modal usaha<input id="goal" type="number" min="0" step="100000" value="5000000" inputmode="numeric"></label>
+</div>
+<div class="res" aria-live="polite"><p>Tabungan per bulan</p><b id="o1">-</b><p>Perkiraan waktu mencapai target</p><b id="o2">-</b><p class="hint" style="color:var(--lt);margin:0">Belum memasukkan bunga atau pengeluaran tak terduga.</p></div>
+</div></div></section>
+
+<section id="faq" style="background:#fff"><div class="wrap">
+<div class="eyebrow">Pertanyaan umum</div><h2>Yang sering ditanyakan</h2>
+<details><summary>Siapa yang bisa bergabung dengan SIGAP?</summary><p>Pengemudi ojek online perempuan di Surabaya. Mitra usaha, lembaga pelatihan, dan komunitas yang ingin mendukung juga dipersilakan.</p></details>
+<details><summary>Apakah SIGAP menggantikan aplikasi Grab atau Gojek?</summary><p>Tidak. SIGAP melengkapi pekerjaanmu di platform transportasi dengan dukungan keuangan, usaha, dan komunitas.</p></details>
+<details><summary>Apakah ada biaya untuk bergabung?</summary><p>Tanyakan langsung lewat WhatsApp untuk informasi terbaru tentang program dan skema yang berlaku.</p></details>
+<details><summary>Bagaimana cara mulai?</summary><p>Isi formulir di bagian Gabung. Pesanmu akan terbuka di WhatsApp dan tim kami akan membalas.</p></details>
+</div></section>
+
+<section id="tim"><div class="wrap">
+<div class="eyebrow">Tim</div><h2>Disusun oleh mahasiswa Universitas Airlangga</h2>
+<div class="team">
+<div class="card"><h3 style="margin-top:0">Alda Firdausa Arisanti</h3><p>Manajemen, angkatan 2024</p></div>
+<div class="card"><h3 style="margin-top:0">Tjokorda Istri Putri Nisya</h3><p>Manajemen, angkatan 2024</p></div>
+<div class="card"><h3 style="margin-top:0">Fauziah Laili Romadhon</h3><p>Manajemen Perhotelan, angkatan 2025</p></div>
+</div></div></section>
+
+<section id="gabung"><div class="wrap"><div class="cta">
+<h2>Gabung atau berkolaborasi dengan SIGAP</h2>
+<p class="sub" style="margin:0 auto 22px">Isi formulir singkat ini. Pesanmu akan terbuka di WhatsApp dan tinggal dikirim.</p>
+<form id="cf" style="max-width:520px;margin:0 auto;text-align:left">
+<label class="fld">Nama<input id="cn" required autocomplete="name"></label>
+<label class="fld">Saya adalah<select id="cr"><option>Pengemudi ojol perempuan</option><option>Mitra usaha atau UMKM</option><option>Komunitas atau lembaga</option><option>Lainnya</option></select></label>
+<label class="fld">Pesan (opsional)<textarea id="cm" rows="3"></textarea></label>
+<button class="btn" type="submit" style="width:100%;cursor:pointer">Kirim lewat WhatsApp</button>
+</form>
+<p class="hint" style="margin-top:14px">Atau chat langsung: <a href="https://wa.me/6282143483270" target="_blank" rel="noopener"><b>0821-4348-3270</b></a></p>
+</div></div></section>
+</main>
+<a class="wa" href="https://wa.me/6282143483270?text=Halo%20SIGAP" target="_blank" rel="noopener" aria-label="Chat SIGAP lewat WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8s-.4-.1-.6.100-.6.800-.8 1-.3.200-.6.100a6.700 6.700 0 01-3.300-2.900c-.2-.4.200-.4.700-1.300a.5.500 0 000-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.300 3 3 0 00-.9 2.200 5.200 5.200 0 001.100 2.800 11.900 11.900 0 004.600 4c1.700.7 2.400.8 3.200.7a2.800 2.800 0 001.800-1.300 2.200 2.200 0 00.2-1.300c-.1-.1-.3-.2-.6-.3z"/></svg></a>
+<footer><div class="wrap">SIGAP · Surabaya · <a href="https://wa.me/6282143483270" target="_blank" rel="noopener">WhatsApp</a></div></footer>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var rp=function(n){return 'Rp'+Math.round(n).toLocaleString('id-ID')};
+function calc(){
+ var inc=+$('inc').value||0,d=+$('days').value||0,p=+$('pct').value,g=+$('goal').value||0;
+ $('pctv').textContent=p;
+ var m=inc*d*p/100;
+ $('o1').textContent=rp(m);
+ if(m<=0){$('o2').textContent='-';return}
+ var b=Math.ceil(g/m);
+ $('o2').textContent=g<=0?'Target sudah tercapai':(b+' bulan'+(b>=12?' (±'+(b/12).toFixed(1).replace('.',',')+' tahun)':''));
+}
+['inc','days','pct','goal'].forEach(function(i){$(i).addEventListener('input',calc)});calc();
+$('cf').addEventListener('submit',function(e){
+ e.preventDefault();
+ var t='Halo SIGAP, saya '+$('cn').value.trim()+' ('+$('cr').value+').'+($('cm').value.trim()?' '+$('cm').value.trim():' Saya ingin tahu lebih lanjut tentang SIGAP.');
+ window.open('https://wa.me/6282143483270?text='+encodeURIComponent(t),'_blank','noopener');
+});
+})();
+</script>
+</body>
+</html>
